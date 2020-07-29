@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFz-JE-b5h">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="phe-Tj-tiK">
+            <objects>
+                <navigationController id="NFz-JE-b5h" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gEB-aL-gfQ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cYX-y6-9WO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhw-k7-UaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1411" y="36"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="APM" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nrD-JZ-gxP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RXw-sm-78T">
+                            <size key="itemSize" width="180" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="ImageCollectionViewCell" id="WN3-WO-bFJ" customClass="ImageCollectionViewCell" customModule="APM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdq-NS-9rh">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="160"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-zY-AiL">
+                                            <rect key="frame" x="76.666666666666671" y="61.666666666666657" width="37" height="37"/>
+                                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cdq-NS-9rh" firstAttribute="centerY" secondItem="WN3-WO-bFJ" secondAttribute="centerY" id="Mmz-sn-3fS"/>
+                                    <constraint firstItem="cdq-NS-9rh" firstAttribute="centerX" secondItem="WN3-WO-bFJ" secondAttribute="centerX" id="Qa1-8V-4nf"/>
+                                    <constraint firstItem="cdq-NS-9rh" firstAttribute="width" secondItem="WN3-WO-bFJ" secondAttribute="width" id="aQV-o6-uNC"/>
+                                    <constraint firstItem="ElY-zY-AiL" firstAttribute="centerX" secondItem="WN3-WO-bFJ" secondAttribute="centerX" id="aVM-jA-e72"/>
+                                    <constraint firstItem="cdq-NS-9rh" firstAttribute="height" secondItem="WN3-WO-bFJ" secondAttribute="height" id="avN-8A-YKt"/>
+                                    <constraint firstItem="ElY-zY-AiL" firstAttribute="centerY" secondItem="WN3-WO-bFJ" secondAttribute="centerY" id="kE9-Zx-KaX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="ElY-zY-AiL" id="9eM-kC-GKv"/>
+                                    <outlet property="imageView" destination="cdq-NS-9rh" id="60Q-ws-7VL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Q3d-Xc-KrY"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="tt7-tD-Eii"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Images" id="u1w-LT-ru5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="nrD-JZ-gxP" id="SeI-bx-oLx"/>
+                        <segue destination="rgd-M9-fTe" kind="show" identifier="ShowImageSegue" id="8Bg-7B-5i9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-644" y="34.729064039408868"/>
+        </scene>
+        <!--Image Scroll View Controller-->
+        <scene sceneID="sC3-Lx-dXi">
+            <objects>
+                <viewController id="rgd-M9-fTe" userLabel="Image Scroll View Controller" customClass="DisplayImageViewController" customModule="APM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avd-hN-8ru">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-ox-1UI">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mP-wx-xMI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="698"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2mP-wx-xMI" firstAttribute="top" secondItem="kAi-ox-1UI" secondAttribute="top" id="9zH-5D-zyc"/>
+                                    <constraint firstItem="2mP-wx-xMI" firstAttribute="leading" secondItem="kAi-ox-1UI" secondAttribute="leading" id="E7i-tG-fVm"/>
+                                    <constraint firstAttribute="bottom" secondItem="2mP-wx-xMI" secondAttribute="bottom" id="FRc-Pa-foF"/>
+                                    <constraint firstAttribute="trailing" secondItem="2mP-wx-xMI" secondAttribute="trailing" id="cIP-vf-RT8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kAi-ox-1UI" firstAttribute="top" secondItem="93e-GG-seS" secondAttribute="top" id="DdC-AJ-lgp"/>
+                            <constraint firstItem="kAi-ox-1UI" firstAttribute="trailing" secondItem="93e-GG-seS" secondAttribute="trailing" id="MtL-cb-nnl"/>
+                            <constraint firstItem="kAi-ox-1UI" firstAttribute="bottom" secondItem="93e-GG-seS" secondAttribute="bottom" id="qZP-r7-oI6"/>
+                            <constraint firstItem="kAi-ox-1UI" firstAttribute="leading" secondItem="93e-GG-seS" secondAttribute="leading" id="wHj-SJ-Ibx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="93e-GG-seS"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="2mP-wx-xMI" id="fom-OQ-Zcp"/>
+                        <outlet property="scrollView" destination="kAi-ox-1UI" id="bAP-Qd-bnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YzC-yG-khs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="34.729064039408868"/>
+        </scene>
+    </scenes>
+</document>

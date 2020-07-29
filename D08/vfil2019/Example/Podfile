@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'vfil2019_Example' do
+  pod 'vfil2019', :path => '../'
+
+  target 'vfil2019_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

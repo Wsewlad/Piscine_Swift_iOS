@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "aeeb419a2f20bdfb113fa9d30bb58017"
+build_time: [1566229923, 270380000]
+inputs:
+  "/Users/vladyslavfil/iOS_Learning/Piscine_Swift_iOS/D00/calculator/ViewController.swift": [1554301894, 164543876]
+  "/Users/vladyslavfil/iOS_Learning/Piscine_Swift_iOS/D00/calculator/AppDelegate.swift": [1554194720, 583821174]

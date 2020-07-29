@@ -1,0 +1,16 @@
+PODS:
+  - vfil2019 (0.1.0)
+
+DEPENDENCIES:
+  - vfil2019 (from `../`)
+
+EXTERNAL SOURCES:
+  vfil2019:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  vfil2019: bef235801eb6d79f96e7ee38accb41408c9eeb36
+
+PODFILE CHECKSUM: e4b9bb78a6594b1440db0665a246050b24923526
+
+COCOAPODS: 1.8.3

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Gw-I2-JVs">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tweets-->
+        <scene sceneID="tU8-i6-NdF">
+            <objects>
+                <tableViewController id="m1p-Ra-LBD" customClass="DisplayTweetsTableViewController" customModule="Tweets" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="2Gs-yW-9rw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textField key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" id="l5K-QV-JOa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <outlet property="delegate" destination="m1p-Ra-LBD" id="KYB-Hp-OoV"/>
+                            </connections>
+                        </textField>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableTweetCellInedtifier" rowHeight="100" id="1xp-RJ-zgC" customClass="TweetTableViewCell" customModule="Tweets" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="58" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1xp-RJ-zgC" id="YTM-7d-mhF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8b-Pw-2pp">
+                                            <rect key="frame" x="10" y="10" width="197" height="24"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-4W-IWy">
+                                            <rect key="frame" x="200" y="10" width="201" height="19"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbx-cG-KW7">
+                                            <rect key="frame" x="10" y="44" width="394" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Cbx-cG-KW7" secondAttribute="bottom" constant="10" id="1ks-bP-gjg"/>
+                                        <constraint firstAttribute="trailing" secondItem="ya1-4W-IWy" secondAttribute="trailing" constant="10" id="7u8-Uy-APX"/>
+                                        <constraint firstItem="Cbx-cG-KW7" firstAttribute="top" secondItem="e8b-Pw-2pp" secondAttribute="bottom" constant="10" id="E74-rl-G3x"/>
+                                        <constraint firstItem="e8b-Pw-2pp" firstAttribute="top" secondItem="YTM-7d-mhF" secondAttribute="top" constant="10" id="Ef4-3m-8gz"/>
+                                        <constraint firstAttribute="trailing" secondItem="Cbx-cG-KW7" secondAttribute="trailing" constant="10" id="T6S-nE-MVZ"/>
+                                        <constraint firstItem="ya1-4W-IWy" firstAttribute="top" secondItem="YTM-7d-mhF" secondAttribute="top" constant="10" id="UnY-wd-VZF"/>
+                                        <constraint firstItem="ya1-4W-IWy" firstAttribute="leading" secondItem="e8b-Pw-2pp" secondAttribute="trailing" constant="-7" id="VML-IY-83k"/>
+                                        <constraint firstItem="e8b-Pw-2pp" firstAttribute="leading" secondItem="YTM-7d-mhF" secondAttribute="leading" constant="10" id="din-hZ-IL4"/>
+                                        <constraint firstItem="Cbx-cG-KW7" firstAttribute="leading" secondItem="YTM-7d-mhF" secondAttribute="leading" constant="10" id="p3t-T6-Vt8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="ya1-4W-IWy" id="dDi-pN-uz3"/>
+                                    <outlet property="descLabel" destination="Cbx-cG-KW7" id="n9f-mq-XLa"/>
+                                    <outlet property="nameLabel" destination="e8b-Pw-2pp" id="siA-gs-5Ha"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m1p-Ra-LBD" id="goI-n4-kzG"/>
+                            <outlet property="delegate" destination="m1p-Ra-LBD" id="die-yh-XRb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tweets" id="s9L-IR-5gG"/>
+                    <connections>
+                        <outlet property="textField" destination="l5K-QV-JOa" id="Xuj-zw-MJy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHL-3V-7KG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-659.4202898550725" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aiM-0W-Ngk">
+            <objects>
+                <navigationController id="4Gw-I2-JVs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l6R-7L-F6C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m1p-Ra-LBD" kind="relationship" relationship="rootViewController" id="7Tt-0e-THO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52s-T3-4KX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="128"/>
+        </scene>
+    </scenes>
+</document>
